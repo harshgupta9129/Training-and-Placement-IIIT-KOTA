@@ -1,0 +1,129 @@
+.sect {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8fafc; // Light background matching team / alumni background
+  padding: 3.5rem 1rem;
+}
+
+.bg-accent-1 {
+  position: absolute;
+  left: -10rem;
+  top: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 64, 106, 0.04) 0%, rgba(43, 64, 106, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-accent-2 {
+  position: absolute;
+  right: -10rem;
+  bottom: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.04) 0%, rgba(234, 88, 12, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ctr {
+  position: relative;
+  z-index: 10;
+  max-width: 1080px;
+  margin: 0 auto;
+  @apply px-4 flex flex-col;
+}
+
+.title-wrapper {
+  @apply mx-auto flex flex-col items-center text-center mb-12 max-w-2xl;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight;
+  font-family: 'Open Sans', sans-serif;
+
+  .highlight {
+    color: #ea580c; // Brand accent orange
+  }
+}
+
+.divider-line {
+  @apply h-1 w-16 rounded mt-4;
+  background: linear-gradient(90deg, #172b4d, #ea580c);
+}
+
+.cards {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-6 w-full;
+}
+
+.card {
+  @apply relative flex flex-col justify-between p-6 md:p-8 rounded-3xl bg-white border border-gray-100 shadow-sm transition-all duration-300;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.015);
+
+  &:hover {
+    @apply border-blue-50;
+    box-shadow: 0 12px 30px rgba(43, 64, 106, 0.04);
+    transform: translateY(-3px);
+  }
+}
+
+.card-header {
+  @apply flex flex-col items-start mb-4;
+}
+
+.role-badge {
+  @apply inline-block px-2.5 py-0.5 rounded text-[9px] font-bold text-white uppercase tracking-wider mb-2;
+  background-color: #ea580c;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card-title {
+  @apply text-base md:text-lg font-bold text-gray-900;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info-list {
+  @apply flex flex-col gap-3.5;
+}
+
+// Single-line rows vertically center-aligned
+.info-item {
+  @apply flex items-center space-x-3;
+}
+
+// Multi-line rows (address, descriptions) top-aligned
+.info-item.align-start {
+  @apply items-start;
+
+  .info-icon {
+    margin-top: 3px; // Perfect alignment with first line of text
+  }
+}
+
+.info-icon {
+  @apply flex-shrink-0 text-gray-400;
+
+  svg {
+    @apply h-5 w-5;
+  }
+}
+
+.info-text {
+  @apply text-sm text-gray-600 leading-normal font-normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.info-link {
+  @apply text-sm font-semibold transition-colors duration-300;
+  font-family: 'Open Sans', sans-serif;
+  color: #172b4d;
+
+  &:hover {
+    color: #ea580c; // Brand accent orange fallback hover
+    @apply underline;
+  }
+}

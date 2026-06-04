@@ -1,0 +1,16 @@
+.wrapper {
+  @apply w-full p-2 lg:w-1/2;
+}
+
+.btn {
+  @apply relative flex h-full w-full items-center rounded bg-gray-100 p-4;
+}
+
+.question {
+  @apply font-semibold;
+  width: calc(100% - 2rem);
+}
+
+.icon {
+  @apply absolute right-0 mr-4 h-6 w-6 flex-shrink-0 text-indigo-500;
+}

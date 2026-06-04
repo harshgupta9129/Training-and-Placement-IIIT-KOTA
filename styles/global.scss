@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: url('/fonts/open-sans-latin-300-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('/fonts/open-sans-latin-400-normal.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url('/fonts/open-sans-latin-600-normal.woff2') format('woff2');
+  }
+
+  html,
+  body {
+    @apply font-sans;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    @media (min-width: 1280px) {
+      scroll-padding-top: 96px;
+    }
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.legend-item-0 > span {
+  color: #0a2558 !important;
+}
+
+.legend-item-1 > span {
+  color: #ea580c !important;
+}

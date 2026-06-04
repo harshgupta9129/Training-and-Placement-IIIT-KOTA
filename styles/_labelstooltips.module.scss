@@ -1,0 +1,33 @@
+.tooltip {
+  @apply m-0 w-48 rounded-xl border border-solid border-gray-100 leading-normal shadow-lg;
+  padding: 0.875rem;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.12);
+}
+
+.label {
+  @apply m-0 font-extrabold text-xs uppercase tracking-wider mb-1.5;
+  color: #1e293b;
+}
+
+.intro {
+  @apply m-0 pt-1.5 border-t border-solid border-gray-100 text-xs font-semibold;
+  color: #475569;
+
+  span {
+    @apply my-1 block;
+
+    &:nth-child(1) {
+      color: #2b406a; // Corporate deep blue (matches colorEligible)
+    }
+
+    &:nth-child(2) {
+      color: #ea580c; // Accent orange (matches colorOffers)
+    }
+
+    &:nth-child(3) {
+      color: #059669; // Green (matches placement rate success color)
+    }
+  }
+}

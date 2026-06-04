@@ -1,0 +1,60 @@
+.sect {
+  @apply py-20 w-full overflow-hidden bg-gray-50 border-t border-b border-gray-100;
+}
+
+.ctr {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.title-wrapper {
+  @apply mx-auto flex flex-col items-center text-center mb-16 max-w-2xl;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.highlight {
+  color: #ea580c;
+}
+
+.divider-line {
+  @apply h-1 w-16 bg-blue-600 rounded mt-4 mb-4;
+  background: linear-gradient(90deg, #2b406a, #ea580c);
+}
+
+.subtitle {
+  @apply text-base text-gray-600 leading-relaxed font-normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo-grid {
+  @apply grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center w-full;
+}
+
+.logo-card {
+  @apply flex items-center justify-center p-4 rounded-2xl bg-white border border-gray-100 shadow-sm transition-all duration-300 w-full;
+  height: 80px;
+  max-width: 175px;
+  cursor: pointer;
+  
+  &:hover {
+    border-color: rgba(234, 88, 12, 0.35); // Brand orange border highlight
+    box-shadow: 0 15px 30px rgba(234, 88, 12, 0.08); // Accent orange glow
+    
+    img {
+      transform: scale(1.08); // Premium zoom effect on the logo itself!
+    }
+  }
+
+  .img-container {
+    @apply relative flex items-center justify-center w-full h-full;
+  }
+  
+  img {
+    @apply transition-all duration-300 object-contain;
+    max-height: 40px !important;
+    max-width: 120px !important;
+  }
+}

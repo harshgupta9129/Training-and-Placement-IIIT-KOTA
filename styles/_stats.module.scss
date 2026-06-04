@@ -1,0 +1,35 @@
+.sect {
+  @apply bg-gray-50 py-20;
+}
+
+.ctr {
+  @apply container mx-auto px-6;
+}
+
+.header-wrapper {
+  @apply mx-auto flex flex-col items-center text-center mb-12 max-w-2xl;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.highlight {
+  color: #ea580c;
+}
+
+.divider-line {
+  @apply h-1 w-16 bg-blue-600 rounded mt-4 mb-4;
+  background: linear-gradient(90deg, #111827, #ea580c);
+}
+
+.additional-info {
+  @apply text-base text-gray-600 leading-relaxed font-normal;
+  font-family: 'Open Sans', sans-serif;
+  
+  .update-time {
+    @apply block mt-2 text-xs font-semibold tracking-wider uppercase;
+    color: #ea580c;
+  }
+}

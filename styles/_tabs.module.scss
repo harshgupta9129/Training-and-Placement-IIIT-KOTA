@@ -1,0 +1,60 @@
+.wrapper {
+  @apply mx-auto flex flex-col w-full max-w-6xl;
+}
+
+.list-wrapper {
+  @apply mb-8 flex w-full justify-center space-x-2 md:space-x-4 p-1.5 rounded-2xl bg-gray-200 bg-opacity-60 max-w-xl mx-auto;
+}
+
+.tab {
+  @apply relative flex-1 text-center;
+}
+
+.tab-link, .tab-link-active {
+  @apply relative block w-full py-2.5 rounded-xl text-sm font-bold uppercase transition-colors duration-300 select-none cursor-pointer;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 1;
+}
+
+.tab-link {
+  @apply text-gray-600 hover:text-gray-900;
+}
+
+.tab-link-active {
+  @apply text-white;
+}
+
+.active-bg {
+  @apply absolute inset-0 rounded-xl shadow-md;
+  background-color: #0a2558;
+  z-index: -1;
+}
+
+.tab-text {
+  @apply relative z-10;
+}
+
+.tab-content {
+  @apply relative w-full;
+  
+  [aria-hidden='true'] {
+    @apply hidden;
+  }
+}
+
+.footnote {
+  @apply text-sm text-gray-500 text-left mb-4 italic;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.data-layout {
+  @apply flex flex-col gap-8 w-full;
+}
+
+.table-pane {
+  @apply w-full;
+}
+
+.charts-pane {
+  @apply w-full;
+}

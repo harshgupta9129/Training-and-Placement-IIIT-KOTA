@@ -1,0 +1,120 @@
+.sect {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8fafc; // Match Why Recruit / Alumni background
+  padding: 3.5rem 1rem;
+}
+
+.bg-accent-1 {
+  position: absolute;
+  left: -10rem;
+  top: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 64, 106, 0.04) 0%, rgba(43, 64, 106, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-accent-2 {
+  position: absolute;
+  right: -10rem;
+  bottom: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(234, 88, 12, 0.04) 0%, rgba(234, 88, 12, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ctr {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title-wrapper {
+  @apply mx-auto flex flex-col items-center text-center mb-10 max-w-2xl;
+}
+
+.title {
+  @apply text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.highlight {
+  color: #ea580c; // Brand accent orange
+}
+
+.divider-line {
+  @apply h-1 w-16 rounded mt-4;
+  background: linear-gradient(90deg, #172b4d, #ea580c);
+}
+
+.lead {
+  @apply mt-10 mb-6 text-center text-sm md:text-base font-bold text-gray-800 tracking-wider;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.members {
+  @apply mx-auto flex max-w-[1250px] flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 z-10 relative mb-6;
+}
+
+.member {
+  @apply flex justify-center items-start;
+}
+
+.wrapper {
+  background-color: #172b4d;
+  @apply relative flex w-[115px] flex-col rounded-xl p-1.5 shadow-md transition-transform duration-300 ease-in-out hover:z-20 hover:scale-[1.15] sm:w-[130px] md:w-[145px];
+}
+
+.image-wrapper {
+  @apply relative w-full overflow-hidden rounded-lg;
+  aspect-ratio: 1 / 1;
+}
+
+.image {
+  @apply h-full w-full rounded-lg object-cover object-center;
+}
+
+.overlay {
+  @apply absolute inset-0 flex items-center justify-center rounded-lg bg-black bg-opacity-50 opacity-0 transition-opacity duration-300;
+  z-index: 10;
+  cursor: pointer;
+
+  .image-wrapper:hover & {
+    @apply opacity-100;
+  }
+}
+
+.linkedin-icon {
+  @apply h-6 w-6 text-white;
+}
+
+.info-wrapper {
+  @apply flex flex-col items-center justify-start mt-2;
+}
+
+.name {
+  @apply text-center text-[9px] font-extrabold uppercase leading-tight tracking-wide text-white sm:text-[10px] md:text-[11px];
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mobile {
+  @apply mt-0.5 text-center text-[8px] leading-tight text-gray-300 sm:text-[9px] md:text-[10px] transition-colors duration-300;
+  font-family: 'Open Sans', sans-serif;
+
+  &:hover {
+    color: #ea580c; // Safe orange color hover state
+  }
+}
+
+.role {
+  @apply mt-0.5 text-center text-[8px] italic leading-tight text-gray-300 sm:text-[9px] md:text-[10px];
+  font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 w-full;
+}
+
+.chart-box {
+  @apply p-6 rounded-2xl border border-gray-100 bg-white flex flex-col transition-all duration-300;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+
+  // Visual top border matches other sections
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2b406a, #ea580c);
+    opacity: 0.85;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.chart-title {
+  @apply text-sm font-extrabold uppercase tracking-wide text-center mb-6;
+  color: #1e293b;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.chart-container {
+  @apply w-full h-[320px] mt-2;
+}

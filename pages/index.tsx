@@ -1,0 +1,57 @@
+import type { NextPage } from 'next';
+
+import Head from 'next/head';
+
+import Contact from '@components/Contact';
+import FAQs from '@components/FAQs';
+import Footer from '@components/Footer';
+import Hero from '@components/Hero';
+import MapLocation from '@components/MapLocation';
+import Navbar from '@components/Navbar';
+import Stars from '@components/OurAlumni';
+import OurEsteemedRecruiters from '@components/OurEsteemedRecruiters';
+import PlcmtHigh from '@components/PlcmtHigh';
+import Policy from '@components/Policy';
+import Preload from '@components/Preload';
+import ScrollToTop from '@components/ScrollToTop';
+import Stats from '@components/Stats';
+import StudAchivers from '@components/StudAchivers';
+import TeamHome from '@components/TeamHome';
+import Pitch from '@components/WhyRecruit';
+
+const IndexPage: NextPage = () => (
+  <>
+    <Head>
+      <meta charSet="UTF-8" />
+      <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta
+        content="The TnP Cell of IIIT Kota acts as a facilitator for training and placement, and works enthusiastically towards the overall development of the students."
+        name="description"
+      />
+      <title>Training and Placement Cell - IIIT Kota</title>
+
+      <Preload font="open-sans-latin-300-normal" />
+      <Preload font="open-sans-latin-400-normal" />
+      <Preload font="open-sans-latin-600-normal" />
+    </Head>
+
+    <Navbar />
+    <Hero />
+    <Pitch />
+    <Stats />
+    <OurEsteemedRecruiters />
+    <Stars />
+    <PlcmtHigh />
+    <StudAchivers />
+    <Policy />
+    <FAQs />
+    <TeamHome />
+    <Contact />
+    <MapLocation />
+    <Footer />
+    <ScrollToTop />
+  </>
+);
+
+export default IndexPage;
